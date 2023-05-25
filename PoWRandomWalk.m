@@ -1,12 +1,13 @@
-alpha = 0.8;
-D = 2 * 1/13;
+alpha = 0.8;	% honest mining power ratio
+D = 2 * 1/13;	% network delay (measured in block interval)
+				% ETH 1.0 ~13s per block
 
 Alphabet = 20;
 States = 49;
 KK = 20;
 % Alphabet is max possible epoch length
 %   need to be large enough to ensure numeric precision of P(j, 2) 
-%   asd well as neligible probability of larger j
+%   as well as negligible probability of larger j
 % States is the number of states in the Markov chain tracked
 % KK is the max number of confirmation to evaluate
 
@@ -33,6 +34,3 @@ for K = 1:KK
 end
 toc
 ErrorLB = Error;
-
-%csvwrite('graph-ETH-2s-0.2-upper.csv', [(1:KK)',ErrorUB])
-%csvwrite('graph-ETH-2s-0.2-lower.csv', [(1:KK)',ErrorLB])

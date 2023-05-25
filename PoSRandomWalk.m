@@ -1,12 +1,13 @@
-alpha = 0.9;
-D = 2 * 1/20;       % Cardano 20s per block
+alpha = 0.9;	% honest stake ratio
+D = 2 * 1/20;	% network delay (measured in block interval)
+				% Cardano 20s per block
 
 Alphabet = 10;
 States = 19;
 KK = 10;
 % Alphabet is max possible epoch length
 %   need to be large enough to ensure numeric precision of P(j, 2) 
-%   asd well as neligible probability of larger j
+%   as well as negligible probability of larger j
 % States is the number of states in the Markov chain tracked
 % KK is the max number of confirmation to evaluate
 
@@ -33,7 +34,4 @@ for K = 1:KK
 end
 toc
 ErrorLB = Error;
-
-%csvwrite('graph-ADA-5s-0.1-upper.csv', [(1:KK)',ErrorUB])
-%csvwrite('graph-ADA-5s-0.1-lower.csv', [(1:KK)',ErrorLB])
 
