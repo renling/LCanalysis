@@ -52,7 +52,7 @@ for step = 1:2*K
                         continue
                     end                  
                     nBlks = h + i;
-                    lmin = min(nBlks, 2*K);                    
+                    lmin = min(nBlks, 2*K); 
                     Prob = PH(h) * PD(h, j) * PA{h, j}(i+1);
                     if k < -i || k > j 
                         dst = k+i-j;

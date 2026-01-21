@@ -1,7 +1,7 @@
 function St2 = PoSMCConfirmPM(K, Pa, PH, PD, PA, PAD, St0, Alphabet, States)
 
 % alpha is fraction of honest mining power
-% K is the number of confirmation needed, Bitcoin uses 5
+% K is the number of confirmation needed
 % Pa is the prob of (a=1, h=0)
 % PH, PD, PA, PAD: see PoWSlotPdf
 % St0 is the state after warmup
